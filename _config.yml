@@ -1,0 +1,6 @@
+highlighter: pygments
+safe: true
+lsi: false
+exclude: ["docker"]
+kramdown:
+  input: GFM

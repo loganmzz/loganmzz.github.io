@@ -7,14 +7,14 @@ SOURCE_DIR=$(cd "$SCRIPT_DIR"/..; pwd)
 . "${SCRIPT_DIR}/env.rc"
 cd "$SCRIPT_DIR"
 
-if [ -f "${CID_FILE}" ]; then
-  docker rm --force $(cat "${CID_FILE}")
-  rm -rf "${CID_FILE}"
+CONTAINER_ID=$(docker ps -aqf "name=${CONTAINER_NAME}")
+if [ ! -z "${CONTAINER_ID}" ]; then
+  docker rm --force "${CONTAINER_ID}"
 fi
 docker run \
-  --cidfile   "${CID_FILE}"                  \
-  --name      ${CONTAINER_NAME}              \
-  --publish   4000:4000                      \
+  --name      ${CONTAINER_NAME}               \
+  --publish   4000:4000                       \
   --volume   "/${SOURCE_DIR}:/var/jekyll/src" \
-  --rm                                       \
+  --workdir  "/var/jekyll/src"                \
+  --rm                                        \
   ${IMAGE_TAG}

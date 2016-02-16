@@ -4,3 +4,11 @@ lsi: false
 exclude: ["docker"]
 kramdown:
   input: GFM
+
+defaults:
+  -
+    scope:
+        path: "" # All
+        type: "pages"
+    values:
+        layout: "default"

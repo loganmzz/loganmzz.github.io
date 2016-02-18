@@ -19,8 +19,8 @@ Working voluntarily for [Developpez.com](http://www.developpez.com/) especially 
     1. [Concepts de base](http://lmauzaize.developpez.com/tutoriels/ceylon/bases/)
     1. [Typage](http://lmauzaize.developpez.com/tutoriels/ceylon/typage/)
     1. [Appels et arguments](http://lmauzaize.developpez.com/tutoriels/ceylon/appels-arguments/)
-* Java
-    1. Tutoriel sur la programmation concurrente en Java (coming soon)
+* Programmation concurrente en Java
+	1. [Gestion des threads](http://lmauzaize.developpez.com/tutoriels/java/concurrence/gestion-threads/)
 
 ### Where I am
 * [GitHub](https://github.com/loganmzz/)
